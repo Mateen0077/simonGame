@@ -5,7 +5,7 @@ var userChosenColour;
 var userClickedPattern = [];
 const buttonColours = ["red", "blue", "green", "yellow"];
 // let level=1;
-
+let score = 0;
 let currentLevel;
 var started = false;
 var level = 0;
@@ -118,6 +118,8 @@ function checkAnswer(currentLevel)
             setTimeout(function () {
                 nextSequence();
               }, 300);
+            score = level;
+            $(".score").text("Your new is score "+ score);
         }
     }
     else
@@ -139,7 +141,10 @@ function ifWrong()
     
      var audio = new Audio("wrong.mp3");
      audio.play();
+    
     }
+    $(".score").text("Your  is score "+ score);
+
     restart();
 }
 function restart()
