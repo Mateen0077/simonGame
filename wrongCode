@@ -1,0 +1,69 @@
+var randomNumber;
+var randomChosenColour;
+var  gamePattern = [];
+var userChosenColour;
+const buttonColours = ["red", "blue", "green", "yellow"];
+
+
+function nextSequence() {
+   
+    randomNumber = Math.floor(Math.random() * 3) + 1;
+
+    randomChosenColour = buttonColours[randomNumber];
+
+    gamePattern.push(randomChosenColour);
+}
+
+$("div#green.btn.green").click(function click() {
+    // $("div#green.btn.green").css("border","2px solid yellow");
+    var audio1 = new Audio("green.mp3");
+    audio1.play();
+    $("div#green.btn.green").addClass("pressed")
+    setTimeout(function()
+  {
+    $("div#green.btn.green").removeClass("pressed");
+  },100);
+
+
+})
+$("div#red.btn.red").click(function click() {
+    // $("div#green.btn.green").css("border","2px solid yellow");
+    var audio1 = new Audio("red.mp3");
+    audio1.play();
+    $("div#red.btn.red").addClass("pressed")
+    setTimeout(function()
+  {
+    $("div#red.btn.red").removeClass("pressed");
+  },100);
+})
+$("div#yellow.btn.yellow").click(function click() {
+    // $("div#green.btn.green").css("border","2px solid yellow");
+    var audio1 = new Audio("yellow.mp3");
+    audio1.play();
+    $("div#yellow.btn.yellow").addClass("pressed")
+    setTimeout(function()
+  {
+    $("div#yellow.btn.yellow").removeClass("pressed");
+  },100);
+
+})
+$("div#blue.btn.blue").click(function click() {
+    // $("div#green.btn.green").css("border","2px solid yellow");
+    var audio1 = new Audio("blue.mp3");
+    audio1.play();
+    $("div#blue.btn.blue").addClass("pressed")
+    setTimeout(function()
+  {
+    $("div#blue.btn.blue").removeClass("pressed");
+  },100);
+})
+$(".btn").click(function()
+{
+    userChosenColour = this.attr("id");
+    console.log(userChosenColour)
+})
+
+
+
+
+
