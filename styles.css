@@ -108,3 +108,11 @@ body {
     min-width: 196px;
   }
 }
+.score
+
+{
+  
+  color: black;
+  padding: 15px;
+  background-color: aquamarine;
+}
