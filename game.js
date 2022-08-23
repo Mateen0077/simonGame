@@ -143,9 +143,8 @@ function ifWrong()
      audio.play();
     
     }
-    $(".score").text("Your   score "+ score);
-
-    
+    $(".score").text("Your  is score "+ score);
+    saveScore();
     restart();
 }
 function restart()
