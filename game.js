@@ -144,8 +144,8 @@ function ifWrong()
     
     }
     $(".score").text("Your  is score "+ score);
+
     
-    saveScore();
     restart();
 }
 function restart()
