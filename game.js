@@ -144,7 +144,8 @@ function ifWrong()
     
     }
     $(".score").text("Your  is score "+ score);
-
+    
+    saveScore();
     restart();
 }
 function restart()
@@ -152,4 +153,9 @@ function restart()
     level = 0;
   gamePattern = [];
   started = false;
+}
+function saveScore()
+{
+    localStorage.setItem("score",score);
+    $(".score").text("Your old was score "+ score);
 }
