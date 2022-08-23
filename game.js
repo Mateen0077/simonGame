@@ -143,7 +143,7 @@ function ifWrong()
      audio.play();
     
     }
-    $(".score").text("Your  is score "+ score);
+    $(".score").text("Your   score "+ score);
 
     
     restart();
