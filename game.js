@@ -74,7 +74,7 @@ function makeAnimation(name) {
     $("#" + name).addClass("pressed")
     setTimeout(function () {
         $("#" + name).removeClass("pressed");
-    }, 200);
+    }, 201);
 }
 
 
